@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validetion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+body{
+ background-image: url("download.jpeg");
+ background-size: cover;
+}
+.box{
+    width: 50%;
+    height: 40%;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid white;
+    border-radius: 25px;
+    transform: translate(-50%,-50%);
+    background: #000;
+    text-align: center;
+}
+.box h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+} 
+.box input[type="text"],.box input[type="password"]{
+    border: 3px solid green;
+    background-color: transparent;
+    display: block;
+    text-align: center;
+ 
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+
+    width: 270px;
+    border-color: yellow;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    border: 3px solid rgb(255, 0, 0);   background-color: transparent;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+    background: rgb(255, 153, 37);
+    border: 2px solid black;
+    color: black;
+}
+    </style>
+    <script>
+         function validate(event) {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "Entri Elevate" && password === "admin123") {
+                alert("Login successful");
+                return false;
+               
+            }
+             else {
+                alert("Login failed");
+              
+            }
+        }
+
+
+    </script>
+</head> 
+<body>
+    <form class="box" action=" index.html" method="post">
+       <h1>
+        login 
+       </h1>   
+       <input type="text" name="" placeholder="Enter the username" id="username"> 
+       <input type="password" name="" placeholder="Enter the password" id="password"> 
+       <input type="submit" name="" value="Login" onclick="validate()"> 
+    </form>
+
+</body>
+<script src="index.js"></script>
+</html>
